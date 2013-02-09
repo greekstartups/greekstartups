@@ -101,11 +101,12 @@
                 </h1>
               <?php endif; ?>
             <?php endif; ?>
+
             <?php if ($site_slogan): ?>
               <div id="site-slogan"><?php print $site_slogan; ?></div>
             <?php endif; ?>
           </div> <!-- /#name-and-slogan -->
-        <?php endif; ?>
+        <?php endif; ?><h1>boo</h1>
         <?php print render($page['top']); ?>
         <?php print render($page['header']); ?>
       </div>
@@ -130,7 +131,7 @@
       <div id="main" class="clearfix">
         <div id="content" class="column">
           <div class="section">
-            <?php if ($page['featured']): ?>
+            <?php if ($page['highlighted']): ?>
               <div id="highlighted"><?php print render($page['featured']); ?></div>
             <?php endif; ?>
             <a id="main-content"></a>
