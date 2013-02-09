@@ -1,0 +1,10 @@
+name = Greekstartups
+description =   Theme for greekstartups.com designed by Gerasimos Tsiamalos (cssigniter.com)
+package = Core
+version = VERSION
+core = 7.x
+stylesheets[all][] = layout.css
+version = "7.18"
+project = "drupal"
+datestamp = "1355944003"
+

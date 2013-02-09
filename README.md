@@ -1,4 +1,4 @@
 greekstartups
 =============
 
-Themes for the greekstartups.com site
+Theme for the greekstartups.com site
