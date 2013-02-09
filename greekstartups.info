@@ -8,8 +8,8 @@ stylesheets[all][] = css/style.css
 
 regions[top] = Top
 regions[header] = Header
+regions[highlighted] = Highlighted
 regions[help] = Help
-regions[featured] = Featured
 regions[content] = Content
 regions[sidebar] = Sidebar
 

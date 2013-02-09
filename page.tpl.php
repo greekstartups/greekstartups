@@ -101,7 +101,7 @@
             <div id="site-slogan"><?php print $site_slogan; ?></div>
           <?php endif; ?>
         </div> <!-- /#name-and-slogan -->
-      <?php endif; ?>
+      <?php endif; ?><h1>boo</h1>
       <?php print render($page['top']); ?>
       <?php print render($page['header']); ?>
 
@@ -123,7 +123,7 @@
     <div id="main-wrapper"><div id="main" class="clearfix">
 
       <div id="content" class="column"><div class="section">
-        <?php if ($page['featured']): ?><div id="highlighted"><?php print render($page['featured']); ?></div><?php endif; ?>
+        <?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
         <a id="main-content"></a>
         <?php print render($title_prefix); ?>
         <?php if ($title): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
