@@ -3,8 +3,19 @@ description =   Theme for greekstartups.com designed by Gerasimos Tsiamalos (css
 package = Core
 version = VERSION
 core = 7.x
-stylesheets[all][] = layout.css
-version = "7.18"
-project = "drupal"
-datestamp = "1355944003"
+stylesheets[all][] = css/layout.css
+stylesheets[all][] = css/style.css
+
+regions[top] = Top
+regions[header] = Header
+regions[help] = Help
+regions[featured] = Featured
+regions[content] = Content
+regions[sidebar] = Sidebar
+
+regions[footer_firstcolumn] = Footer first column
+regions[footer_secondcolumn] = Footer second column
+regions[footer_thirdcolumn] = Footer third column
+regions[footer] = Footer
+
 
