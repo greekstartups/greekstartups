@@ -72,7 +72,15 @@
  * @ingroup themeable
  */
 ?>
-
+<div class="header-wrap">
+  <header>
+    <ul>
+      <li>LOGIN</li>
+      <li class="or">-OR-</li>
+      <li>REGISTER</li>
+    </ul>
+  </header>
+</div>
 <div id="page-wrapper">
   <div id="page">
     <div id="header">
@@ -107,19 +115,18 @@
             <?php endif; ?>
           </div> <!-- /#name-and-slogan -->
         <?php endif; ?><h1>boo</h1>
-        <?php print render($page['top']); ?>
-        <?php print render($page['header']); ?>
+        <?php if ($main_menu || $secondary_menu): ?>
+          <div id="navigation">
+            <div class="section">
+              <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'inline', 'clearfix')), 'heading' => t('Main menu'))); ?>
+              <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('links', 'inline', 'clearfix')), 'heading' => t('Secondary menu'))); ?>
+            </div>
+          </div> <!-- /.section, /#navigation -->
+        <?php endif; ?>
+        <!-- <?php print render($page['top']); ?>
+        <?php print render($page['header']); ?> -->
       </div>
     </div> <!-- /.section, /#header -->
-
-    <?php if ($main_menu || $secondary_menu): ?>
-      <div id="navigation">
-        <div class="section">
-          <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'inline', 'clearfix')), 'heading' => t('Main menu'))); ?>
-          <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('links', 'inline', 'clearfix')), 'heading' => t('Secondary menu'))); ?>
-        </div>
-      </div> <!-- /.section, /#navigation -->
-    <?php endif; ?>
 
     <?php if ($breadcrumb): ?>
       <div id="breadcrumb"><?php print $breadcrumb; ?></div>
