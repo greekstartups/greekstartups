@@ -1,5 +1,5 @@
 // TOP
-.header-wrap
+.top-wrap
 	width: 100%
 	min-width: 980px
 	background: $background-black
@@ -33,7 +33,26 @@
 			width: 980px
 			height: 110px
 			margin: 0
-
-
-
+			.section
+				#logo
+					float: left
+					margin: 40px 0
+				#navigation
+					.section
+						float: right
+						margin: 45px 0
+						ul
+							li
+								margin: 0 10px
+								a
+									@include adventpro($font-regular, $font-grey, medium)
+									text-decoration: none
+									&:hover
+										color: $font-black
+			border-bottom: 5px solid $background-black
+		// FOOTER
+		#footer
+			height: 100px
+			.section
+				border-top: 5px solid $background-black
 
