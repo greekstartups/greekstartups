@@ -72,17 +72,9 @@
  * @ingroup themeable
  */
 ?>
-<div class="top-wrap">
-  <header>
-    <ul>
-      <li>LOGIN</li>
-      <li class="or">-OR-</li>
-      <li>REGISTER</li>
-    </ul>
-  </header>
-</div>
 <div id="page-wrapper">
   <div id="page">
+    <?php print render($page['top']); ?>
     <div id="header">
       <div class="section clearfix">
         <?php if ($logo): ?>
@@ -123,8 +115,7 @@
             </div>
           </div> <!-- /.section, /#navigation -->
         <?php endif; ?>
-        <!-- <?php print render($page['top']); ?>
-        <?php print render($page['header']); ?> -->
+        <?php print render($page['header']); ?>
       </div>
     </div> <!-- /.section, /#header -->
 
@@ -139,7 +130,7 @@
         <div id="content" class="column">
           <div class="section">
             <?php if ($page['highlighted']): ?>
-              <div id="highlighted"><?php print render($page['featured']); ?></div>
+              <div id="highlighted"><?php print render($page['highlighted']); ?></div>
             <?php endif; ?>
             <a id="main-content"></a>
             <?php print render($title_prefix); ?>
