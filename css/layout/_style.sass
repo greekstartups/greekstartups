@@ -1,58 +1,70 @@
-// TOP
-.top-wrap
-	width: 100%
-	min-width: 980px
-	background: $background-black
-	height: 40px
-	header
-		height: 40px
-		text-align: right
-		ul
-			display: inline-block
-			list-style: none
-			margin: 8px
-			li
-				float: left
-				padding: 5px
-				@include adventpro($font-small, $font-white-dark)
-			.or
-				@include adventpro($font-tiny, $font-white-dark)
-				line-height: 1.5em
-// PAGE
+a:hover 
+	cursor: pointer
 #page-wrapper
 	width: 100%
 	min-width: 980px
 	margin: 0
 	padding: 0
 	background: $background-main
-	#page
-		width: 980px
-		margin: 0 auto
-		// HEADER
-		#header
-			width: 980px
-			height: 110px
-			margin: 0
-			.section
-				#logo
-					float: left
-					margin: 40px 0
-				#navigation
-					.section
-						float: right
-						margin: 45px 0
-						ul
-							li
-								margin: 0 10px
-								a
-									@include adventpro($font-regular, $font-grey, medium)
-									text-decoration: none
-									&:hover
-										color: $font-black
-			border-bottom: 5px solid $background-black
-		// FOOTER
-		#footer
-			height: 100px
-			.section
-				border-top: 5px solid $background-black
+	// TOP
+	.region-top
+		width: 100%
+		min-width: 980px
+		background: $background-black
+		height: 40px
+		text-align: right
+		// IF SIGNED OUT
+		#block-block-6
+			display: inline-block
+			margin: 0 90px 0 0
+			.content
+				text-align: right
+				.login-register
+					margin: 13px 0 0 0
+					list-style: none
+					li
+						display: inline-block
+					#login, #register
+						@include adventpro($font-small, $font-white-dark)
+						text-transform: uppercase
+						text-decoration: none
+						&:hover
+							text-decoration: underline
+							cursor: pointer
+					#or
+						@include adventpro($font-tiny, $font-white-dark)
+		// SHOWS ON CLICK
+		#block-user-login
+			display: block
+			position: absolute
+			top: 40px
+			right: 45px
+			text-align: left
+			background: $background-black
+			.content
+				margin: 0
+				padding: 10px
+				@include adventpro($font-medium, $font-white-dark)
+				a
+					color: $font-white-dark
+					text-decoration: none
+					&:hover
+						text-decoration: underline
 
+		// IF SIGNED IN
+		#block-system-user-menu
+			display: inline-block
+			margin: 0 90px 0 0
+			.content
+				text-align: right
+				.menu
+					margin: 10px 0 0 0
+					list-style: none
+					li
+						display: inline-block
+						a
+							@include adventpro($font-small, $font-white-dark)
+							text-transform: uppercase
+							text-decoration: none
+							&:hover
+								text-decoration: underline
