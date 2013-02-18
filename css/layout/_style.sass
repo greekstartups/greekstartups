@@ -35,7 +35,7 @@ a:hover
 						@include adventpro($font-tiny, $font-white-dark)
 		// SHOWS ON CLICK
 		#block-user-login
-			display: block
+			display: none
 			position: absolute
 			top: 40px
 			right: 45px
@@ -68,3 +68,40 @@ a:hover
 							text-decoration: none
 							&:hover
 								text-decoration: underline
+	// PAGE
+	#page
+		width: 980px
+		margin: 0 auto
+		// HEADER
+		#header
+			margin: 50px 0 0 0
+			padding: 0 0 2px
+			border-bottom: 2px dotted $border-grey
+			.clearfix
+				border-bottom: 5px solid $border-black
+				#logo
+					float: left
+				.region-header
+					float: right
+					display: inline-block
+					#block-system-main-menu
+						.content
+							.menu
+								list-style: none
+								li, .leaf, .first, .collapsed, .last
+									list-style: none
+									display: inline-block
+									margin: 0 10px
+									a
+										text-decoration: none
+										@include adventpro($font-regular, $font-grey)
+										&:hover
+											text-decoration: underline
+								li.active-trail
+									a
+										@include adventpro($font-regular, $font-black)
+										&:hover
+											text-decoration: underline
+		#main-wrapper
+			border-top: 1.5px solid $border-grey
+			margin: 2px 0 0
