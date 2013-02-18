@@ -73,8 +73,8 @@
  */
 ?>
 <div id="page-wrapper">
+  <?php print render($page['top']); ?>
   <div id="page">
-    <?php print render($page['top']); ?>
     <div id="header">
       <div class="section clearfix">
         <?php if ($logo): ?>
