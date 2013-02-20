@@ -50,7 +50,6 @@ a:hover
 					text-decoration: none
 					&:hover
 						text-decoration: underline
-
 		// IF SIGNED IN
 		#block-system-user-menu
 			display: inline-block
@@ -74,9 +73,8 @@ a:hover
 		margin: 0 auto
 		// HEADER
 		#header
-			margin: 50px 0 0 0
-			padding: 0 0 2px
 			border-bottom: 2px dotted $border-grey
+			padding: 0 0 2px
 			.clearfix
 				border-bottom: 5px solid $border-black
 				#logo
@@ -84,24 +82,20 @@ a:hover
 				.region-header
 					float: right
 					display: inline-block
+					// MAIN MENU
 					#block-system-main-menu
+						margin: 50px 0
 						.content
 							.menu
-								list-style: none
-								li, .leaf, .first, .collapsed, .last
-									list-style: none
-									display: inline-block
-									margin: 0 10px
-									a
-										text-decoration: none
-										@include adventpro($font-regular, $font-grey)
-										&:hover
-											text-decoration: underline
+								@include horizontal-list(15px, right)
+								a
+									@include adventpro($font-regular, $font-grey)
+									text-decoration: none
+									&:hover
+										text-decoration: underline
 								li.active-trail
 									a
 										@include adventpro($font-regular, $font-black)
-										&:hover
-											text-decoration: underline
 		#main-wrapper
 			border-top: 1.5px solid $border-grey
 			margin: 2px 0 0
