@@ -27,3 +27,57 @@ body.page-frontpage
 													.gmap
 														width: 980px !important
 														height: 450px !important
+									// SEARCH FILTERS
+									#block-views-exp-location-table-page-1
+										.content
+											.views-exposed-form
+												.views-exposed-widgets
+													#edit-title-wrapper
+														padding: 0
+														label
+															margin: 35px 0 0 0
+															@include adventpro($font-regular, $font-black)
+														.views-widget
+															.form-item
+																margin: 10px 0 0 0
+																input
+																	width: 280px
+																	height: 20px
+																	padding: 5px
+																	border: 1px solid #d6d0bc
+																	background-color: #ebe7db
+																	@include box-shadow(inset 0 0 4px rgba(75,75,75,.16))
+																	@include adventpro($font-medium, $font-black)
+							// CONTENT
+							.region-content
+								.view-frontpage
+									// BROWSE ALPHABETICALLY
+									.view-header
+										height: 60px
+										margin: 40px 0 60px 0
+										padding: 40px 0 50px 0
+										border-top: 1px solid $border-grey-light
+										border-bottom: 1px solid $border-grey-light
+										ul
+											@include horizontal-list(0px, left)
+											li
+												margin: 0 1px
+												border: 1px solid #d6d0bc
+												background-color: #ebe7db
+												@include box-shadow(inset 0 0 4px rgba(75,75,75,.16))
+												a
+													display: inline-block
+													padding: 10px
+													@include adventpro($font-regular, $font-black)
+													text-decoration: none
+												&:hover
+													background-color: #4b4b4b
+													a
+														@include adventpro($font-regular, $font-yellow)
+
+
+																		
+
+
+
+
