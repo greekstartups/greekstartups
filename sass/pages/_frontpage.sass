@@ -12,6 +12,18 @@ body.page-frontpage
 									// MAP
 									#block-views-location-table-block-1
 										h2
-											color: $font-black
-					// SIDEBAR
-					#sidebar
+											@include helvetica-neue($font-big, $font-black)
+											@include opacity(.2)
+											margin: 25px 0
+										.content
+											.view-location-table
+												.view-filters
+													display: none
+												// GOOGLE MAP
+												.view-content
+													border-top: 1px solid $border-grey 
+													border-bottom: 1px solid $border-grey
+													padding: 1px 0
+													.gmap
+														width: 980px !important
+														height: 450px !important
