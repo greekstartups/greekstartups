@@ -1,82 +1,136 @@
 body.page-frontpage
 	#page-wrapper
 		#page
+			// MAP AND SEARCH
+			#highlighted
+				.region-highlighted
+					// MAP
+					#block-views-location-table-block-1
+						h2
+							@include helvetica-neue($font-big, $font-black)
+							@include opacity(.2)
+							margin: 25px 0
+						.content
+							.view-location-table
+								.view-filters
+									display: none
+								// GOOGLE MAP
+								.view-content
+									border-top: 1px solid $border-grey 
+									border-bottom: 1px solid $border-grey
+									padding: 1px 0
+									.gmap
+										width: 980px !important
+										height: 450px !important
+					// SEARCH FILTERS
+					#block-views-exp-location-table-page-1
+						.content
+							.views-exposed-form
+								.views-exposed-widgets
+									#edit-title-wrapper
+										padding: 0
+										label
+											margin: 35px 0 0 0
+											@include adventpro($font-regular, $font-black)
+										.views-widget
+											.form-item
+												margin: 10px 0 0 0
+												input
+													width: 280px
+													height: 20px
+													padding: 5px
+													border: 1px solid #d6d0bc
+													background-color: #ebe7db
+													@include box-shadow(inset 0 0 4px rgba(75,75,75,.16))
+													@include adventpro($font-medium, $font-black)
+					// BROWSE ALPHABETICALLY
+					#block-block-7
+						width: 980px
+						height: 60px
+						margin: 40px 0 60px 0
+						padding: 40px 0 50px 0
+						border-top: 1px solid $border-grey-light
+						border-bottom: 1px solid $border-grey-light
+						ul
+							@include horizontal-list(0px, left)
+							li
+								margin: 0 1px
+								border: 1px solid #d6d0bc
+								background-color: #ebe7db
+								@include box-shadow(inset 0 0 4px rgba(75,75,75,.16))
+								a
+									display: inline-block
+									padding: 10px
+									@include adventpro($font-regular, $font-black)
+									text-decoration: none
+								&:hover
+									background-color: #4b4b4b
+									a
+										@include adventpro($font-regular, $font-yellow)
+			// Content & Sidebar
 			#main-wrapper
 				#main
-					// MAIN CONTENT
+					// Startups
 					#content
-						.section
-							// MAP AND SEARCH
-							#highlighted
-								.region-highlighted
-									// MAP
-									#block-views-location-table-block-1
-										h2
-											@include helvetica-neue($font-big, $font-black)
-											@include opacity(.2)
-											margin: 25px 0
-										.content
-											.view-location-table
-												.view-filters
-													display: none
-												// GOOGLE MAP
-												.view-content
-													border-top: 1px solid $border-grey 
-													border-bottom: 1px solid $border-grey
-													padding: 1px 0
-													.gmap
-														width: 980px !important
-														height: 450px !important
-									// SEARCH FILTERS
-									#block-views-exp-location-table-page-1
-										.content
-											.views-exposed-form
-												.views-exposed-widgets
-													#edit-title-wrapper
-														padding: 0
-														label
-															margin: 35px 0 0 0
-															@include adventpro($font-regular, $font-black)
-														.views-widget
-															.form-item
-																margin: 10px 0 0 0
-																input
-																	width: 280px
-																	height: 20px
-																	padding: 5px
-																	border: 1px solid #d6d0bc
-																	background-color: #ebe7db
-																	@include box-shadow(inset 0 0 4px rgba(75,75,75,.16))
-																	@include adventpro($font-medium, $font-black)
-							// CONTENT
-							.region-content
-								.view-frontpage
-									// BROWSE ALPHABETICALLY
-									.view-header
-										height: 60px
-										margin: 40px 0 60px 0
-										padding: 40px 0 50px 0
-										border-top: 1px solid $border-grey-light
-										border-bottom: 1px solid $border-grey-light
-										ul
-											@include horizontal-list(0px, left)
-											li
-												margin: 0 1px
-												border: 1px solid #d6d0bc
-												background-color: #ebe7db
-												@include box-shadow(inset 0 0 4px rgba(75,75,75,.16))
-												a
-													display: inline-block
-													padding: 10px
-													@include adventpro($font-regular, $font-black)
-													text-decoration: none
-												&:hover
-													background-color: #4b4b4b
-													a
-														@include adventpro($font-regular, $font-yellow)
+						width: 680px
+						float: left
+						// Single Startup
+						.node-startup
+							h2
+								@include helvetica($font-giant, $font-black, 100)
+								color: #4b4b4b
+							.submitted
+								display: none
+							.content
+								// Logo
+								.field-name-field-startup-logo
+									float: right
+									width: 220px
+									height: 220px
+									margin: 0 0 0 10px
+									border: 1px solid #e1ddcc
+									img
+										border: 5px solid #f1eddb
+										width: 210px
+										height: 210px
+								// Description
+								.field-type-text-with-summary
+									@include helvetica-neue($font-medium, $font-black)
+									line-height: 1.5em
+									p
+										margin: 15px 0
+								// Funding Status
+								.field-name-taxonomy-vocabulary-2
+									.field-label
+										clear: both
+										@include helvetica-neue($font-small, $font-black)
+										text-transform: uppercase
+										margin: 0 10px 0 0
+										line-height: 2.0em
+									.field-item
+										@include border-radius(2px)
+										@include background-clip(padding-box)
+										background-color: #4b4b4b
+										padding: 3px
+										margin: 2px
+										display: inline-block
+										a
+											@include helvetica-neue($font-small, $font-yellow, 200)
+											text-transform: uppercase
+								// Product Status
+								.field-name-taxonomy-vocabulary-3
+									margin: 10px 0
+									@extend .field-name-taxonomy-vocabulary-2
+								// Tags
+								.field-name-taxonomy-vocabulary-1
+									@extend .field-name-taxonomy-vocabulary-2
+							.node-readmore
+								display: none
+					// Sidebar
+					#sidebar
+						width: 300px
+						float: right
 
-
-																		
 
 
 
