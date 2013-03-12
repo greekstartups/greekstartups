@@ -77,6 +77,9 @@ body.page-frontpage
 						// Single Startup
 						.node-startup
 							h2
+								margin: 20px 0 10px 0
+								padding: 20px 0 0 0
+								border-top: 1px solid $border-grey
 								@include helvetica($font-giant, $font-black, 100)
 								color: #4b4b4b
 							.submitted
@@ -95,6 +98,8 @@ body.page-frontpage
 										height: 210px
 								// Description
 								.field-type-text-with-summary
+									padding: 10px 0 0 0
+									margin: 0 0 20px 0
 									@include helvetica-neue($font-medium, $font-black)
 									line-height: 1.5em
 									p
@@ -130,6 +135,21 @@ body.page-frontpage
 					#sidebar
 						width: 300px
 						float: right
+						.add-startup-btn
+							a
+								display: block
+								margin: 0 0 0 30px
+								width: 250px
+								line-height: 60px
+								text-align: center
+								@include adventpro(18px, #4b4b4b)
+								border: 1px solid #ffb400
+								@include border-radius(2px)
+								@include background-clip(padding-box)
+								background-color: #ffcb00
+								@include box-shadow(0 0 5px rgba(228,224,209,.75))
+								@include background-image(linear-gradient(bottom, #ffbf00 0%, #ffcb00 100%))
+
 
 
 
