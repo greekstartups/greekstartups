@@ -1,0 +1,243 @@
+/*============= GLOBAL STYLES ============= */
+body {
+  color: $font-black;
+}
+a:hover {
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+  @include unstyled-link;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  outline: none;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0px !important;
+  -moz-box-shadow: 0px !important;
+}
+
+/*============= LAYOUT ============= */
+#page-wrapper {
+  width: 100%;
+  min-width: 980px;
+  margin: 0;
+  padding: 0;
+  background: $background-main;
+  // TOP
+  .region-top {
+    width: 100%;
+    min-width: 980px;
+    background: $background-black;
+    height: 40px;
+    text-align: right;
+    // IF SIGNED OUT
+    #block-block-6 {
+      display: inline-block;
+      margin: 0 90px 0 0;
+      .content {
+        text-align: right;
+        .login-register {
+          margin: 13px 0 0 0;
+          list-style: none;
+          li {
+            display: inline-block;
+          }
+          #login, #register {
+            @include adventpro($font-small, $font-white-dark);
+            text-transform: uppercase;
+            text-decoration: none;
+            &:hover {
+              text-decoration: underline;
+              cursor: pointer;
+            }
+          }
+          #or {
+            @include adventpro($font-tiny, $font-white-dark);
+          }
+        }
+      }
+    }
+    // SHOWS ON CLICK
+    #block-user-login {
+      display: none;
+      position: absolute;
+      top: 40px;
+      right: 45px;
+      text-align: left;
+      background: $background-black;
+      .content {
+        margin: 0;
+        padding: 10px;
+        @include adventpro($font-medium, $font-white-dark);
+        a {
+          color: $font-white-dark;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    // IF SIGNED IN
+    #block-system-user-menu {
+      display: inline-block;
+      margin: 0 90px 0 0;
+      .content {
+        text-align: right;
+        .menu {
+          margin: 10px 0 0 0;
+          list-style: none;
+          li {
+            display: inline-block;
+            a {
+              @include adventpro($font-small, $font-white-dark);
+              text-transform: uppercase;
+              text-decoration: none;
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // PAGE
+  #page {
+    width: 980px;
+    margin: 0 auto;
+    // HEADER
+    #header {
+      .clearfix {
+        #logo {
+          float: left;
+        }
+        .region-header {
+          float: right;
+          display: inline-block;
+          // MAIN MENU
+          #block-system-main-menu {
+            margin: 50px 0;
+            .content {
+              .menu {
+                @include horizontal-list(15px, right);
+                a {
+                  @include adventpro($font-regular, $font-grey);
+                  text-decoration: none;
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                }
+                li.active-trail {
+                  a {
+                    @include adventpro($font-regular, $font-black);
+                  }
+				  ul.menu {
+					position: absolute;}
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+	#main-wrapper {
+	  #content {
+		h1 {
+		  margin: 20px 0 10px 0;
+		  @include helvetica($font-giant, $font-black, 100);
+		  color: #4b4b4b;
+		}
+		.node {
+		  h2 {
+			margin: 20px 0 10px 0;
+			padding: 20px 0 0 0;
+			@include helvetica($font-giant, $font-black, 100);
+			color: #4b4b4b;
+		  }
+		  .submitted {
+			display: none;
+		  }
+		  .content {
+			}
+		  .node-readmore {
+			display: none;
+		  }
+		}
+		ul.pager {
+		  padding: 10px 0;
+		  text-align: left;
+		  li {
+			display: inline-block;
+			margin: 0 1px;
+			border: 1px solid #d6d0bc;
+			background-color: #ebe7db;
+			padding: 5px 10px;
+			@include box-shadow(inset 0 0 4px rgba(75, 75, 75, 0.16));
+			a {
+			  @include adventpro($font-regular, $font-black);
+			  text-decoration: none;
+			}
+			&:hover {
+			  background-color: #4b4b4b;
+			  a {
+				@include adventpro($font-regular, $font-yellow);
+			  }
+			}
+		  }
+		  li.pager-current {
+			background-color: #4b4b4b;
+			@include adventpro($font-regular, $font-yellow);
+			text-decoration: none;
+		  }
+		}
+	  }
+	  
+	// Sidebar
+	  #sidebar {
+		float: right;
+		padding: 0 25px;
+		text-align: center;
+		width: 250px;
+		.block {
+		  background:  transparent url(images/separator.png) repeat-x 0 100%;
+		  padding: 20px 0 25px;}
+		#block-block-4 {
+		  .add-startup-btn {
+			a {
+			  display: block;
+			  margin: 41px 0 0 0;
+			  width: 248px;
+			  line-height: 60px;
+			  text-align: center;
+			  @include adventpro(18px, #4b4b4b);
+			  border: 1px solid #ffb400;
+			  @include border-radius(2px);
+			  @include background-clip(padding-box);
+			  background-color: #ffcb00;
+			  @include box-shadow(0 0 5px rgba(228, 224, 209, 0.75));
+			  @include background-image(linear-gradient(bottom, #ffbf00 0%, #ffcb00 100%));
+			}
+		  }
+		  small {
+			font-size: 12px;}
+		}
+	  }
+	}
+	#footer {
+	  background: transparent url(images/separator.png) repeat-x 0 2px;
+	  border-top: 2px solid #000;
+	  margin-top: 20px;
+	  padding: 20px 0;
+	}
+  }
+}

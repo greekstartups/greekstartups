@@ -1,0 +1,17 @@
+body.page-contact {
+  #page-wrapper {
+    #page {
+      #breadcrumb {
+        display: none;
+      }
+      // Content & Sidebar
+      #main-wrapper {
+        #main {
+		  #content {
+			width: 500px;
+			float: left;}
+        }
+      }
+    }
+  }
+}

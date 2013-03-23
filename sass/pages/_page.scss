@@ -1,0 +1,17 @@
+body.node-type-page {
+  #page-wrapper {
+    #page {
+      #breadcrumb {
+        display: none;
+      }
+      // Content & Sidebar
+      #main-wrapper {
+        #main {
+          #content {
+            width: 100%;
+			}
+        }
+      }
+    }
+  }
+}
